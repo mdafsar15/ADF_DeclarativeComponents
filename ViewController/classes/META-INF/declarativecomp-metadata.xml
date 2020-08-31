@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<declarativeCompDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/declarativecomp">
+  <declarativecomp-jsp-ui-def>/customerPanel.jspx</declarativecomp-jsp-ui-def>
+  <declarativecomp-taglib>
+    <taglib-name>ComponentLibrary</taglib-name>
+    <taglib-uri>/componentLib1</taglib-uri>
+    <taglib-prefix>cl</taglib-prefix>
+  </declarativecomp-taglib>
+</declarativeCompDefs>

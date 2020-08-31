@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:componentDef var="attrs" componentVar="component">
+    <af:panelBox text="Customer" id="dc_pb1">
+      <f:facet name="toolbar"/>
+      <af:panelFormLayout id="dc_pfl1">
+        <f:facet name="footer"/>
+        <af:inputText label="Customer First Name" id="dc_it1"
+                      value="#{attrs.CustFirstName}"/>
+        <af:inputText label="Customer Last Name" id="dc_it2"
+                      value="#{attrs.CustLastName}"/>
+        <af:inputText label="Customer Email" id="dc_it3"
+                      value="#{attrs.CustEmail}"/>
+        <af:facetRef facetName="extra"/>
+      </af:panelFormLayout>
+    </af:panelBox>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>customerPanel</display-name>
+        <facet>
+          <description>a place for extra fields</description>
+          <facet-name>extra</facet-name>
+        </facet>
+        <attribute>
+          <attribute-name>CustFirstName</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <attribute>
+          <attribute-name>CustLastName</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <attribute>
+          <attribute-name>CustEmail</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <component-extension>
+          <component-tag-namespace>component</component-tag-namespace>
+          <component-taglib-uri>/componentLib1</component-taglib-uri>
+        </component-extension>
+      </component>
+    </af:xmlContent>
+  </af:componentDef>
+</jsp:root>
